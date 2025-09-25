@@ -11,7 +11,6 @@ import {
 } from "react-native";
 
 export default function Movimiento() {
-  // lista local para ver algo funcionando
   const [movimientos, setMovimientos] = useState([
     { id: 1, nombre: "Mercado", monto: 120000, categoria: "Alimentación", fecha: new Date() },
     { id: 2, nombre: "Bus", monto: 10000, categoria: "Transporte", fecha: new Date() },

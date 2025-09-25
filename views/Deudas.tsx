@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } from "react-native";
 
 export default function Deudas() {
-  // lista local para probar (luego lo conectas a tu estado/BD)
   const [deudas, setDeudas] = useState([
     { id: 1, nombre: "Teléfono", monto: 50000, estaPaga: false },
     { id: 2, nombre: "Internet", monto: 60000, estaPaga: true },

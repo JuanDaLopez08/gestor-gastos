@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image} from "react-native";
 
 export default function Login({ onLogin, onIrARegistro }) {
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");
 
   function iniciarSesion() {
-    onLogin && onLogin(); // va a Configuración
+    onLogin?.();
   }
 
   function registrarse() {
-    onIrARegistro && onIrARegistro(); // va a Registro
+    onIrARegistro?.();
   }
 
   function cancelar() {
@@ -54,6 +54,10 @@ export default function Login({ onLogin, onIrARegistro }) {
         </View>
 
         <View style={estilos.derecha}>
+          <Image 
+            source={require("../assets/login-image.png")}
+            style={estilos.imagen}
+          />
           <Text style={estilos.tituloDerecha}>¡Hola!</Text>
           <Text style={estilos.textoDerecha}>
             Crea tu cuenta para empezar a organizar tus finanzas
@@ -143,4 +147,5 @@ const estilos = StyleSheet.create({
   },
   textoContorno: { color: "#fff", fontWeight: "bold", letterSpacing: 0.5,},
   texto:{textTransform:"uppercase"},
+  imagen:{width:120, height:120, marginBottom:20},
 });

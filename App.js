@@ -8,8 +8,8 @@ import Deudas from "./views/Deudas";
 import Movimiento from "./views/Movimiento";
 
 export default function App() {
-  const [screen, setScreen] = useState("Login"); // "Login" | "Registro" | "Configuracion" | "Main"
-  const [activeTab, setActiveTab] = useState("Movimiento"); // "Movimiento" | "Analisis" | "Deudas"
+  const [screen, setScreen] = useState("Login"); 
+  const [activeTab, setActiveTab] = useState("Movimiento"); 
 
   let contenido;
   if (screen === "Login") {

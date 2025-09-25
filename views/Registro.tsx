@@ -11,11 +11,11 @@ export default function Registro({ onRegistrado, onVolver }) {
   const [confirmar, setConfirmar] = useState("");
 
   function registrarse() {
-    onRegistrado && onRegistrado(); // continúa a Configuración (o donde quieras)
+    onRegistrado?.(); 
   }
 
   function volver() {
-    onVolver && onVolver(); // regresa al Login
+    onVolver?.(); 
   }
 
   return (

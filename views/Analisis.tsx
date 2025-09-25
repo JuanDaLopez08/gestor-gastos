@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 export default function Analisis() {
-  // datos locales de ejemplo para ver algo (en el futuro vendrán de tu estado global/BD)
+  
   const movimientos = [
     { id: 1, nombre: "Mercado", monto: 120000, categoria: "Alimentación", fecha: new Date() },
     { id: 2, nombre: "Bus", monto: 10000, categoria: "Transporte", fecha: new Date() },
@@ -20,7 +20,7 @@ export default function Analisis() {
 
   const total = delMes.reduce((s, m) => s + m.monto, 0);
 
-  // acumulado por categoría (código fácil)
+  
   const resumen = {};
   for (let i = 0; i < delMes.length; i++) {
     const mov = delMes[i];
