@@ -6,7 +6,11 @@ const COLOR_SECUNDARIO = "#6b7280";
 const BG = "#f2f4f7";
 const BORDE = "#e5e7eb";
 
-export default function Configuracion() {
+interface ConfiguracionProps {
+  onGuardado?: () => void;
+}
+
+export default function Configuracion({ onGuardado }: ConfiguracionProps) {
   const [salario, setSalario] = useState("");
   const [topeGeneral, setTopeGeneral] = useState(""); // %
   const [nuevaCategoria, setNuevaCategoria] = useState("");
@@ -149,7 +153,7 @@ export default function Configuracion() {
 
         {/* Acciones */}
         <View style={estilos.fila}>
-          <TouchableOpacity style={[estilos.boton, estilos.primario, { flex: 1 }]} onPress={guardar}>
+          <TouchableOpacity style={[estilos.boton, estilos.primario, { flex: 1 }]} onPress={() => { guardar(); onGuardado && onGuardado(); }}>
             <Text style={estilos.textoBtn}>Guardar</Text>
           </TouchableOpacity>
           <TouchableOpacity
